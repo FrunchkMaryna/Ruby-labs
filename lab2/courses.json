@@ -1,0 +1,35 @@
+{
+  "1": {
+    "title": "Course1",
+    "topics": [],
+    "instructors": [],
+    "category": "programming",
+    "duration_hours": 0,
+    "start_date": "",
+    "end_date": "",
+    "price": 3400.0,
+    "status": "draft"
+  },
+  "2": {
+    "title": "Course2",
+    "topics": [],
+    "instructors": [],
+    "category": "programming",
+    "duration_hours": 22,
+    "start_date": "",
+    "end_date": "",
+    "price": 2000.0,
+    "status": "draft"
+  },
+  "3": {
+    "title": "Course3",
+    "topics": [],
+    "instructors": [],
+    "category": "design",
+    "duration_hours": 0,
+    "start_date": "",
+    "end_date": "",
+    "price": 4000.0,
+    "status": "draft"
+  }
+}
