@@ -17,15 +17,19 @@ class CourseManager
   end
 
   # ---------- LIST ----------
-  def list
-    if @collection.empty?
+  def list(collection)
+    if collection.empty?
       puts "No courses found."
       return
     end
 
-    @collection.each do |id, c|
+    collection.each do |id, c|
       puts "[#{id}] #{c.title} | #{c.category} | #{c.price} грн | #{c.status}"
     end
+  end
+
+  def print
+    list(@collection)
   end
 
   # ---------- DELETE ----------
@@ -64,13 +68,11 @@ class CourseManager
   end
 
   def filter_by_category(category)
-    result = @collection.select do |_, c|
+     @collection.select do |_, c|
       c.category.downcase == category.downcase
     end
 
-    result.each do |id, c|
-      puts "[#{id}] #{c.title}"
-    end
+    
   end
 
   def filter_by_status(status)

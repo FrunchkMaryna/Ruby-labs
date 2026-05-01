@@ -95,7 +95,7 @@ loop do
 
   # ---------- LIST ----------
   when "2"
-    manager.list
+    manager.print
 
   # ---------- EDIT ----------
   when "3"
@@ -158,7 +158,8 @@ loop do
   when "6"
     puts "Enter category:"
     txt = gets.chomp
-    manager.filter_by_category(txt)
+    collection  =  manager.filter_by_category(txt)
+    manager.list(collection)
 
   when "7"
     puts "Enter status:"

@@ -29,3 +29,27 @@
   end_date: ''
   price: 4000.0
   status: draft
+4: !ruby/object:Course
+  title: Ruby
+  topics: []
+  instructors: []
+  category: programming
+  duration_hours: 25
+  start_date: ''
+  end_date: ''
+  price: 0.0
+  status: active
+5: !ruby/object:Course
+  title: Ruby on Rails
+  topics:
+  - Ruby
+  - Rails
+  - MVC
+  - ActiveRecord
+  instructors: []
+  category: Programming
+  duration_hours: 40
+  start_date: '2026-05-10'
+  end_date: '2026-06-20'
+  price: 2700.0
+  status: draft
