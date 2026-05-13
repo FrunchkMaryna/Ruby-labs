@@ -1,0 +1,43 @@
+<%= form_with(model: course) do |f| %>
+    <div>
+      <%= f.label :title, "Назва" %>
+      <%= f.text_field :title %>
+    </div>
+  
+    <div>
+      <%= f.label :category, "Категорія" %>
+      <%= f.select :category, @categories, { include_blank: "— Оберіть категорію —" } %>
+    </div>
+  
+    <div>
+      <%= f.label :main_topic, "Основна тема" %>
+      <%= f.text_area :main_topic %>
+    </div>
+  
+    <div>
+      <%= f.label :duration_hours, "Тривалість (год)" %>
+      <%= f.number_field :duration_hours %>
+    </div>
+  
+    <div>
+      <%= f.label :start_date, "Дата початку" %>
+      <%= f.date_field :start_date %>
+    </div>
+  
+    <div>
+      <%= f.label :end_date, "Дата закінчення" %>
+      <%= f.date_field :end_date %>
+    </div>
+  
+    <div>
+      <%= f.label :price, "Ціна" %>
+      <%= f.number_field :price, step: 0.01 %>
+    </div>
+  
+    <div>
+      <%= f.label :status, "Статус" %>
+      <%= f.select :status, Course.statuses.keys %>
+    </div>
+  
+    <%= f.submit %>
+  <% end %>

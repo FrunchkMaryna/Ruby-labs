@@ -1,0 +1,13 @@
+<h1><%= @course.title %></h1>
+
+<p>Категорія: <%= @course.category %></p>
+<p>Тема: <%= @course.main_topic %></p>
+<p>Тривалість: <%= @course.duration_hours %> год</p>
+<p>Початок: <%= @course.start_date %></p>
+<p>Кінець: <%= @course.end_date %></p>
+<p>Ціна: <%= @course.price %> грн</p>
+<p>Статус: <%= @course.status %></p>
+
+<%= link_to "Редагувати", edit_course_path(@course) %>
+|
+<%= link_to "Назад", courses_path %>

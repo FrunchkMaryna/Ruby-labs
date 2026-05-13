@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  category: MyString
+  main_topic: MyString
+  duration_hours: 1
+  start_date: 2026-05-08
+  end_date: 2026-05-08
+  price: 1.5
+  status: 1
+
+two:
+  title: MyString
+  category: MyString
+  main_topic: MyString
+  duration_hours: 1
+  start_date: 2026-05-08
+  end_date: 2026-05-08
+  price: 1.5
+  status: 1

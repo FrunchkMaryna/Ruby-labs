@@ -1,0 +1,18 @@
+<h1>Активні курси</h1>
+
+<% if @courses.empty? %>
+  <p>Активних курсів немає.</p>
+<% else %>
+  <% @courses.each do |course| %>
+    <div>
+      <h2><%= course.title %></h2>
+      <p>Категорія: <%= course.category %></p>
+      <p>Тривалість: <%= course.duration_hours %> год</p>
+      <p>Ціна: <%= course.price %> грн</p>
+      <%= link_to "Детальніше", course %>
+    </div>
+    <hr>
+  <% end %>
+<% end %>
+
+<%= link_to "Всі курси", courses_path %>

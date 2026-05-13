@@ -1,0 +1,20 @@
+<h1>Усі курси</h1>
+
+<%= link_to "Новий курс", new_course_path %>
+|
+<%= link_to "Активні курси", active_courses_path %>
+
+<% @courses.each do |course| %>
+  <div>
+    <h2><%= course.title %></h2>
+    <p>Категорія: <%= course.category %></p>
+    <p>Статус: <%= course.status %></p>
+    <p>Ціна: <%= course.price %> грн</p>
+    <%= link_to "Детальніше", course %>
+    |
+    <%= link_to "Редагувати", edit_course_path(course) %>
+    |
+    <%= link_to "Видалити", course, data: { turbo_method: :delete, turbo_confirm: "Видалити?" } %>
+  </div>
+  <hr>
+<% end %>
