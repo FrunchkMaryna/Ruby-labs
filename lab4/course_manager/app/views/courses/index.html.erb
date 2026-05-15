@@ -1,0 +1,32 @@
+<h1>Всі курси</h1>
+
+<table class="table table-striped mt-3">
+  <thead>
+    <tr>
+      <th>Назва</th>
+      <th>Категорія</th>
+      <th>Ціна</th>
+      <th>Статус</th>
+      <th>Дії</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @courses.each do |course| %>
+      <tr>
+        <td><%= course.title %></td>
+        <td><%= course.category %></td>
+        <td><%= course.price %> грн</td>
+        <td><%= status_badge(course) %></td>
+        <td>
+          <%= link_to "Переглянути", course, class: "btn btn-sm btn-primary" %>
+          <%= link_to "Редагувати", edit_course_path(course), class: "btn btn-sm btn-warning" %>
+          <%= button_to "Видалити", course, method: :delete,
+          data: { turbo_confirm: "Видалити?" },
+          class: "btn btn-sm btn-danger" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Новий курс", new_course_path, class: "btn btn-success" %>

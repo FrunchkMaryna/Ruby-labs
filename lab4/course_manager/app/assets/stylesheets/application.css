@@ -1,0 +1,137 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+ :root {
+    --primary: #6c63ff;
+    --primary-dark: #574fd6;
+    --accent: #ff6584;
+  }
+  
+  body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .navbar {
+    background: linear-gradient(135deg, #6c63ff, #574fd6) !important;
+    box-shadow: 0 2px 12px rgba(108, 99, 255, 0.3);
+  }
+  
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .nav-link {
+    font-weight: 500;
+    transition: opacity 0.2s;
+  }
+  
+  .nav-link:hover {
+    opacity: 0.75;
+  }
+  
+  .container.mt-4 {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 28px 32px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  }
+  
+  h1 {
+    color: #2d2b55;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    border-left: 4px solid #6c63ff;
+    padding-left: 12px;
+  }
+  
+  .table {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .table thead {
+    background: linear-gradient(135deg, #6c63ff, #574fd6);
+    color: white;
+  }
+  
+  .table thead th {
+    border: none;
+    font-weight: 600;
+    padding: 12px 16px;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f3f1ff;
+  }
+  
+  .btn-primary {
+    background: #6c63ff;
+    border-color: #6c63ff;
+  }
+  
+  .btn-primary:hover {
+    background: #574fd6;
+    border-color: #574fd6;
+  }
+  
+  .btn-success {
+    background: #2ec4b6;
+    border-color: #2ec4b6;
+  }
+  
+  .btn-success:hover {
+    background: #25a99d;
+    border-color: #25a99d;
+  }
+  
+  .btn-warning {
+    background: #ffbe0b;
+    border-color: #ffbe0b;
+    color: #2d2b55;
+  }
+  
+  .btn-danger {
+    background: #ff6584;
+    border-color: #ff6584;
+  }
+  
+  .form-control:focus,
+  .form-select:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 0 0.2rem rgba(108, 99, 255, 0.2);
+  }
+  
+  .form-label {
+    font-weight: 600;
+    color: #2d2b55;
+  }
+  
+  .alert-success {
+    background: #e8f5e9;
+    border-color: #2ec4b6;
+    color: #1a7a72;
+  }
+  
+  .badge {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 20px;
+  }
+  form.button_to {
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+  .bg-secondary { background-color: #a0a0b0 !important; }
+  .bg-success { background-color: #2ec4b6 !important; }
+  .bg-dark { background-color: #2d2b55 !important; }

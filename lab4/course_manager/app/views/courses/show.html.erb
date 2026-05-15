@@ -1,0 +1,12 @@
+<h1><%= @course.title %></h1>
+
+<p><strong>Категорія:</strong> <%= @course.category %></p>
+<p><strong>Тема:</strong> <%= @course.main_topic %></p>
+<p><strong>Тривалість:</strong> <%= @course.duration_hours %> год</p>
+<p><strong>Початок:</strong> <%= @course.start_date %></p>
+<p><strong>Кінець:</strong> <%= @course.end_date %></p>
+<p><strong>Ціна:</strong> <%= @course.price %> грн</p>
+<p><strong>Статус:</strong> <%= status_badge(@course) %></p>
+
+<%= link_to "Редагувати", edit_course_path(@course), class: "btn btn-warning" %>
+<%= link_to "Назад", courses_path, class: "btn btn-secondary" %>

@@ -1,0 +1,30 @@
+<h1>Активні курси</h1>
+
+<% if @courses.empty? %>
+  <div class="alert alert-info">Активних курсів немає.</div>
+<% else %>
+  <table class="table table-striped mt-3">
+    <thead>
+      <tr>
+        <th>Назва</th>
+        <th>Категорія</th>
+        <th>Тривалість</th>
+        <th>Ціна</th>
+        <th>Статус</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @courses.each do |course| %>
+        <tr>
+          <td><%= course.title %></td>
+          <td><%= course.category %></td>
+          <td><%= course.duration_hours %> год</td>
+          <td><%= course.price %> грн</td>
+          <td><%= status_badge(course) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+
+<%= link_to "Всі курси", courses_path, class: "btn btn-secondary" %>
